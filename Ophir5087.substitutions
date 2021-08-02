@@ -1,0 +1,7 @@
+file Ophir5087.template {
+pattern {P, PORT}
+    {"BL4A:SF:OPHIR1", "OP1"}
+    {"BL4A:SF:OPHIR2", "OP2"}
+ 
+}
+

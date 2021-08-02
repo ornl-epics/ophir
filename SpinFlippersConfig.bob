@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>SpinFlippersUser</name>
+  <width>960</width>
+  <height>800</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Frequency</text>
+    <y>52</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>Load</text>
+    <y>112</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(OS1):LOADRST</pv_name>
+    <x>120</x>
+    <y>112</y>
+    <width>170</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_2</name>
+    <pv_name>$(OS1):FREQRST</pv_name>
+    <x>120</x>
+    <y>52</y>
+    <width>170</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>Amplitude</text>
+    <y>82</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>Frequency</text>
+    <x>510</x>
+    <y>52</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>Load</text>
+    <x>510</x>
+    <y>112</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_4</name>
+    <pv_name>$(OS2):LOADRST</pv_name>
+    <x>630</x>
+    <y>112</y>
+    <width>170</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_5</name>
+    <pv_name>$(OS2):FREQRST</pv_name>
+    <x>630</x>
+    <y>52</y>
+    <width>170</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_19</name>
+    <text>Amplitude</text>
+    <x>510</x>
+    <y>82</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <x>480</x>
+    <y>131</y>
+    <width>10</width>
+    <height>10</height>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_3</name>
+    <x>485</x>
+    <y>133</y>
+    <width>1</width>
+    <height>1</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_6</name>
+    <x>1300</x>
+    <y>470</y>
+    <width>10</width>
+    <height>10</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_40</name>
+    <text>Incident Arm Waveform Generator</text>
+    <x>10</x>
+    <y>20</y>
+    <width>459</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_41</name>
+    <text>Detector Arm Waveform Generator</text>
+    <x>510</x>
+    <y>20</y>
+    <width>419</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_3</name>
+    <pv_name>$(OS1):AMPRST</pv_name>
+    <x>120</x>
+    <y>82</y>
+    <width>170</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_6</name>
+    <pv_name>$(OS2):AMPRST</pv_name>
+    <x>630</x>
+    <y>82</y>
+    <width>170</width>
+  </widget>
+</display>

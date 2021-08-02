@@ -1,0 +1,118 @@
+#reads 
+
+record(seq, "$(P):COMS") {
+  field(DESC, "Sync commands to Ophir")
+  field(SCAN, "5 second")
+  field(PINI, "YES")
+  field(DOL1, "1")
+  field(DLY1, "0.5")
+  field(LNK1, "$(P):FAULTS.PROC")
+  field(DOL2, "1")
+  field(DLY2, "0.5")
+  field(LNK2, "$(P):MODE.PROC")
+  field(DOL3, "1")
+  field(DLY3, "0.5")
+  field(LNK3, "$(P):FWDPOWER.PROC")
+  field(DOL4, "1")
+  field(DLY4, "0.5")
+  field(LNK4, "$(P):REVPOWER.PROC")
+  field(DOL5, "1")
+  field(DLY5, "0.5")
+  field(LNK5, "$(P):ALCLEVEL.PROC")
+  field(DOL6, "1")
+  field(DLY6, "0.5")
+  field(LNK6, "$(P):VVALEVEL.PROC")
+  field(DOL7, "1")
+  field(DLY7, "0.5")
+  field(LNK7, "$(P):VSWRALARM.PROC")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}     
+
+
+record(stringin, "$(P):ID") {
+  field(DTYP, "stream")
+  field(INP, "@Ophir5087.proto getModel $(PORT) 0")
+  field(SCAN, "10 second")
+  field(PINI, "YES")
+}
+
+
+record(stringin, "$(P):FAULTS") {
+  field(DTYP, "stream")
+  field(INP, "@Ophir5087.proto getFaults $(PORT) 0")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+
+record(stringin, "$(P):MODE") {
+  field(DTYP, "stream")
+  field(INP, "@Ophir5087.proto getMode $(PORT) 0")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+record(stringin, "$(P):FWDPOWER") {
+  field(DTYP, "stream")
+  field(INP, "@Ophir5087.proto getFWDPower $(PORT) 0")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+record(stringin, "$(P):REVPOWER") {
+  field(DTYP, "stream")
+  field(INP, "@Ophir5087.proto getREVPower $(PORT) 0")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+record(ai, "$(P):ALCLEVEL") {
+  field(DTYP, "stream")
+  field(INP, "@Ophir5087.proto getALCLevel $(PORT) 0")
+  field(EGU, "dBM")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(ai, "$(P):VVALEVEL") {
+  field(DTYP, "stream")
+  field(INP, "@Ophir5087.proto getVVALevel $(PORT) 0")
+  field(EGU, "%")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(ai, "$(P):VSWRALARM") {
+  field(DTYP, "stream")
+  field(INP, "@Ophir5087.proto getVSWRALARM $(PORT) 0")
+  field(EGU, "dBm")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+#Sets
+record(bo, "$(P):SETONOFF"){
+  field(DTYP, "stream")
+  field(OUT, "@Ophir5087.proto setOnline $(PORT) 0")
+  info(archive, "Monitor, 00:00:01, VAL")
+  info(autosaveFields, "VAL")
+
+}
+
+record(ao, "$(P):SETVVALEVEL") {
+  field(DTYP, "stream")
+  field(OUT, "@Ophir5087.proto setVVALevel $(PORT) 0")
+  field(EGU, "%")
+  field(DRVL, "0")
+  field(DRVH, "100")
+  info(archive, "Monitor, 00:00:01, VAL")
+  info(autosaveFields, "VAL")
+
+}
+
+
