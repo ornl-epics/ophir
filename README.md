@@ -1,3 +1,11 @@
-# ages
+# Ophir
+EPICS Driver developed by Mariano Ruiz, zma@ornl.gov
+Ophir
 
-AGES Gas handling
+
+Ophir RF amplifier
+
+multi-octave amplifiers from 10 KHz to 40 GHz
+
+
+EPICS Module ASYN drvAsynIPPortConfigure 
